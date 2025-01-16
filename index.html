@@ -11,13 +11,214 @@
 		<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet" />
 		<link rel="stylesheet" href="css/style.css" />
 	</head>
-	<body>
-		<main class="container p-6">
-			<section id="products">
-				<h1 class="mb-8 font-serif text-3xl font-bold">Deserts</h1>
+	<body class="bg-rose50">
+		<main class="container mx-auto max-w-6xl p-6 font-serif">
+			<h1 class="mb-8 text-4xl font-bold">Deserts</h1>
+			<section id="products" class="mx-auto flex flex-col gap-6 lg:flex-row lg:items-start">
 				<!-- Product List -->
-				<div class="grid gap-6">
-					<div class="h-[212px] w-full overflow-hidden rounded-lg bg-slate-200"></div>
+				<div class="mb-6 grid gap-6 sm:grid-cols-2 md:min-w-[688px] md:grid-cols-3">
+					<!-- Item Card 1 -->
+					<div class="flex flex-col">
+						<div class="relative mb-9 h-[212px] w-full">
+							<img
+								src="img/image1.jpg"
+								alt="Waffle and berries"
+								class="inset-0 h-full w-full rounded-lg object-cover object-center"
+							/>
+							<button class="cart-btn flex hidden">
+								<img src="img/shopping-cart-plus.png" alt="Shopping Cart Icon" />
+								<span class="whitespace-nowrap text-sm">Add to Cart</span>
+							</button>
+							<button class="active-cart-btn space-between flex">
+								<div
+									class="group flex h-5 w-5 items-center justify-center rounded-full border border-white text-xl duration-300"
+								>
+									<svg
+										width="20"
+										height="20"
+										viewBox="0 0 20 20"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+										class="rounded-full duration-300 group-hover:bg-white"
+									>
+										<path d="M5 9.375H15V10.625H5V9.375Z" fill="white" class="group-hover:fill-red duration-300" />
+									</svg>
+								</div>
+
+								<span class="flex-1 text-white">4</span>
+								<div class="flex h-5 w-5 items-center justify-center rounded-full border border-white text-xl">
+									<span class="text-white">+</span>
+								</div>
+							</button>
+						</div>
+						<div class="flex flex-col items-start gap-1">
+							<p class="text-rose500 text-sm font-thin">Waffle</p>
+							<p class="text-rose900 text-lg font-semibold">Waffle with Berries</p>
+							<p class="text-red text-lg font-semibold">$6.50</p>
+						</div>
+					</div>
+					<!-- Item Card 2 -->
+					<div class="flex flex-col">
+						<div class="relative mb-9 h-[212px] w-full">
+							<img
+								src="img/image2.jpg"
+								alt="Vanilla Bean Crème Brûlée"
+								class="inset-0 h-full w-full rounded-lg object-cover object-center"
+							/>
+							<button class="cart-btn">
+								<img src="img/shopping-cart-plus.png" alt="Shopping Cart Icon" />
+								<span class="whitespace-nowrap text-sm">Add to Cart</span>
+							</button>
+						</div>
+						<div class="flex flex-col items-start gap-1">
+							<p class="text-rose500 text-sm font-thin">Crème Brûlée</p>
+							<p class="text-rose900 text-lg font-semibold">Vanilla Bean Crème Brûlée</p>
+							<p class="text-red text-lg font-semibold">$7.00</p>
+						</div>
+					</div>
+					<!-- Item Card 3 -->
+					<div class="flex flex-col">
+						<div class="relative mb-9 h-[212px] w-full">
+							<img
+								src="img/image3.jpg"
+								alt="Macaron Mix of Five"
+								class="inset-0 h-full w-full rounded-lg object-cover object-center"
+							/>
+							<button class="cart-btn">
+								<img src="img/shopping-cart-plus.png" alt="Shopping Cart Icon" />
+								<span class="whitespace-nowrap text-sm">Add to Cart</span>
+							</button>
+						</div>
+						<div class="flex flex-col items-start gap-1">
+							<p class="text-rose500 text-sm font-thin">Macaron</p>
+							<p class="text-rose900 text-lg font-semibold">Macaron Mix of Five</p>
+							<p class="text-red text-lg font-semibold">$8.00</p>
+						</div>
+					</div>
+					<!-- Item Card 4 -->
+					<div class="flex flex-col">
+						<div class="relative mb-9 h-[212px] w-full">
+							<img
+								src="img/image4.jpg"
+								alt="Classic Tiramisu"
+								class="inset-0 h-full w-full rounded-lg object-cover object-center"
+							/>
+							<button class="cart-btn">
+								<img src="img/shopping-cart-plus.png" alt="Shopping Cart Icon" />
+								<span class="whitespace-nowrap text-sm">Add to Cart</span>
+							</button>
+						</div>
+						<div class="flex flex-col items-start gap-1">
+							<p class="text-rose500 text-sm font-thin">Tiramisu</p>
+							<p class="text-rose900 text-lg font-semibold">Classic Tiramisu</p>
+							<p class="text-red text-lg font-semibold">$5.50</p>
+						</div>
+					</div>
+					<!-- Item Card 5 -->
+					<div class="flex flex-col">
+						<div class="relative mb-9 h-[212px] w-full">
+							<img
+								src="img/image5.jpg"
+								alt="Pistachio Baklava"
+								class="inset-0 h-full w-full rounded-lg object-cover object-center"
+							/>
+							<button class="cart-btn">
+								<img src="img/shopping-cart-plus.png" alt="Shopping Cart Icon" />
+								<span class="whitespace-nowrap text-sm">Add to Cart</span>
+							</button>
+						</div>
+						<div class="flex flex-col items-start gap-1">
+							<p class="text-rose500 text-sm font-thin">Baklava</p>
+							<p class="text-rose900 text-lg font-semibold">Pistachio Baklava</p>
+							<p class="text-red text-lg font-semibold">$4.00</p>
+						</div>
+					</div>
+					<!-- Item Card 6 -->
+					<div class="flex flex-col">
+						<div class="relative mb-9 h-[212px] w-full">
+							<img
+								src="img/image6.jpg"
+								alt="Lemon Meringue Pie"
+								class="inset-0 h-full w-full rounded-lg object-cover object-center"
+							/>
+							<button class="cart-btn">
+								<img src="img/shopping-cart-plus.png" alt="Shopping Cart Icon" />
+								<span class="whitespace-nowrap text-sm">Add to Cart</span>
+							</button>
+						</div>
+						<div class="flex flex-col items-start gap-1">
+							<p class="text-rose500 text-sm font-thin">Baklava</p>
+							<p class="text-rose900 text-lg font-semibold">Pistachio Baklava</p>
+							<p class="text-red text-lg font-semibold">$4.00</p>
+						</div>
+					</div>
+					<!-- Item Card 7 -->
+					<div class="flex flex-col">
+						<div class="relative mb-9 h-[212px] w-full">
+							<img
+								src="img/image7.jpg"
+								alt="Red Velvet Cake"
+								class="inset-0 h-full w-full rounded-lg object-cover object-center"
+							/>
+							<button class="cart-btn">
+								<img src="img/shopping-cart-plus.png" alt="Shopping Cart Icon" />
+								<span class="whitespace-nowrap text-sm">Add to Cart</span>
+							</button>
+						</div>
+						<div class="flex flex-col items-start gap-1">
+							<p class="text-rose500 text-sm font-thin">Cake</p>
+							<p class="text-rose900 text-lg font-semibold">Red Velvet Cake</p>
+							<p class="text-red text-lg font-semibold">$4.50</p>
+						</div>
+					</div>
+					<!-- Item Card 8 -->
+					<div class="flex flex-col">
+						<div class="relative mb-9 h-[212px] w-full">
+							<img
+								src="img/image8.jpg"
+								alt="Salted Caramel Brownie"
+								class="inset-0 h-full w-full rounded-lg object-cover object-center"
+							/>
+							<button class="cart-btn">
+								<img src="img/shopping-cart-plus.png" alt="Shopping Cart Icon" />
+								<span class="whitespace-nowrap text-sm">Add to Cart</span>
+							</button>
+						</div>
+						<div class="flex flex-col items-start gap-1">
+							<p class="text-rose500 text-sm font-thin">Brownie</p>
+							<p class="text-rose900 text-lg font-semibold">Salted Caramel Brownie</p>
+							<p class="text-red text-lg font-semibold">$5.50</p>
+						</div>
+					</div>
+					<!-- Item Card 9 -->
+					<div class="flex flex-col">
+						<div class="relative mb-9 h-[212px] w-full">
+							<img
+								src="img/image9.jpg"
+								alt="Vanilla Panna Cotta"
+								class="inset-0 h-full w-full rounded-lg object-cover object-center"
+							/>
+							<button class="cart-btn">
+								<img src="img/shopping-cart-plus.png" alt="Shopping Cart Icon" />
+								<span class="whitespace-nowrap text-sm">Add to Cart</span>
+							</button>
+						</div>
+						<div class="flex flex-col items-start gap-1">
+							<p class="text-rose500 text-sm font-thin">Panna Cotta</p>
+							<p class="text-rose900 text-lg font-semibold">Vanilla Panna Cotta</p>
+							<p class="text-red text-lg font-semibold">$6.50</p>
+						</div>
+					</div>
+				</div>
+				<!-- Cart -->
+				<div class="w-full rounded-lg bg-white p-6 lg:flex-1">
+					<h2 class="text-red mb-5 text-xl font-bold">Your Cart (<span>0</span>)</h2>
+					<div class="flex flex-col items-center gap-4">
+						<div class="h-[128px] w-[128px]">
+							<img src="img/empty-illustration.png" alt="Empty Cart" class="h-full w-full object-contain object-center" />
+						</div>
+						<p class="text-rose500 text-center text-sm font-semibold">Your added items will appear here</p>
+					</div>
 				</div>
 			</section>
 		</main>
