@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 .cart-btn {
-	@apply border-rose400 hover:text-red absolute left-1/2 top-full mx-auto w-40 -translate-x-1/2 -translate-y-1/2 items-center justify-center gap-2 rounded-full border bg-white px-3 py-3 duration-150;
+	@apply border-rose400 hover:text-red absolute left-1/2 top-full mx-auto h-[46px] w-40 -translate-x-1/2 -translate-y-1/2 items-center justify-center gap-2 rounded-full border bg-white px-3 duration-150;
 }
 
 .active-cart-btn {
-	@apply border-rose400 bg-red hover:text-red absolute left-1/2 top-full mx-auto w-40 -translate-x-1/2 -translate-y-1/2 items-center justify-between gap-2 rounded-full border px-3 py-3 duration-150;
+	@apply border-rose400 bg-red hover:text-red absolute left-1/2 top-full mx-auto h-[46px] w-40 -translate-x-1/2 -translate-y-1/2 items-center justify-between gap-2 rounded-full border px-3 duration-150;
 }

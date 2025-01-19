@@ -9,6 +9,7 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet" />
+		<script defer src="js/script.js"></script>
 		<link rel="stylesheet" href="css/style.css" />
 	</head>
 	<body class="bg-rose50">
@@ -25,31 +26,52 @@
 								alt="Waffle and berries"
 								class="inset-0 h-full w-full rounded-lg object-cover object-center"
 							/>
-							<button class="cart-btn flex hidden">
-								<img src="img/shopping-cart-plus.png" alt="Shopping Cart Icon" />
-								<span class="whitespace-nowrap text-sm">Add to Cart</span>
-							</button>
-							<button class="active-cart-btn space-between flex">
-								<div
-									class="group flex h-5 w-5 items-center justify-center rounded-full border border-white text-xl duration-300"
-								>
-									<svg
-										width="20"
-										height="20"
-										viewBox="0 0 20 20"
-										fill="none"
-										xmlns="http://www.w3.org/2000/svg"
-										class="rounded-full duration-300 group-hover:bg-white"
-									>
-										<path d="M5 9.375H15V10.625H5V9.375Z" fill="white" class="group-hover:fill-red duration-300" />
-									</svg>
-								</div>
 
-								<span class="flex-1 text-white">4</span>
-								<div class="flex h-5 w-5 items-center justify-center rounded-full border border-white text-xl">
-									<span class="text-white">+</span>
-								</div>
-							</button>
+							<div class="cart-buttons">
+								<!-- No Items Added -->
+								<button class="cart-btn flex" data-id="1">
+									<img src="img/shopping-cart-plus.png" alt="Shopping Cart Icon" />
+									<span class="whitespace-nowrap text-sm">Add to Cart</span>
+								</button>
+								<!-- Items Added -->
+								<button class="active-cart-btn space-between hidden cursor-default" data-id="1">
+									<div
+										class="remove-btn group flex h-5 w-5 cursor-pointer items-center justify-center rounded-full border border-white text-xl duration-300"
+									>
+										<svg
+											width="20"
+											height="20"
+											viewBox="0 0 20 20"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
+											class="rounded-full duration-300 group-hover:bg-white"
+										>
+											<path d="M5 9.375H15V10.625H5V9.375Z" fill="white" class="group-hover:fill-red duration-300" />
+										</svg>
+									</div>
+
+									<span id="qty-1" class="flex-1 text-white">4</span>
+
+									<div
+										class="add-btn group flex h-5 w-5 cursor-pointer items-center justify-center rounded-full border border-white text-xl duration-300"
+									>
+										<svg
+											width="20"
+											height="20"
+											viewBox="0 0 20 20"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
+											class="rounded-full duration-300 group-hover:bg-white"
+										>
+											<path
+												d="M15 9.375H10.625V5H9.375V9.375H5V10.625H9.375V15H10.625V10.625H15V9.375Z"
+												fill="white"
+												class="group-hover:fill-red duration-300"
+											/>
+										</svg>
+									</div>
+								</button>
+							</div>
 						</div>
 						<div class="flex flex-col items-start gap-1">
 							<p class="text-rose500 text-sm font-thin">Waffle</p>
@@ -65,10 +87,51 @@
 								alt="Vanilla Bean Crème Brûlée"
 								class="inset-0 h-full w-full rounded-lg object-cover object-center"
 							/>
-							<button class="cart-btn">
-								<img src="img/shopping-cart-plus.png" alt="Shopping Cart Icon" />
-								<span class="whitespace-nowrap text-sm">Add to Cart</span>
-							</button>
+							<div class="cart-buttons">
+								<!-- No Items Added -->
+								<button class="cart-btn flex" data-id="2">
+									<img src="img/shopping-cart-plus.png" alt="Shopping Cart Icon" />
+									<span class="whitespace-nowrap text-sm">Add to Cart</span>
+								</button>
+								<!-- Items Added -->
+								<button class="active-cart-btn space-between hidden cursor-default" data-id="2">
+									<div
+										class="remove-btn group flex h-5 w-5 cursor-pointer items-center justify-center rounded-full border border-white text-xl duration-300"
+									>
+										<svg
+											width="20"
+											height="20"
+											viewBox="0 0 20 20"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
+											class="rounded-full duration-300 group-hover:bg-white"
+										>
+											<path d="M5 9.375H15V10.625H5V9.375Z" fill="white" class="group-hover:fill-red duration-300" />
+										</svg>
+									</div>
+
+									<span id="qty-2" class="flex-1 text-white">4</span>
+
+									<div
+										class="add-btn group flex h-5 w-5 cursor-pointer items-center justify-center rounded-full border border-white text-xl duration-300"
+									>
+										<svg
+											width="20"
+											height="20"
+											viewBox="0 0 20 20"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
+											class="rounded-full duration-300 group-hover:bg-white"
+										>
+											<path
+												d="M15 9.375H10.625V5H9.375V9.375H5V10.625H9.375V15H10.625V10.625H15V9.375Z"
+												fill="white"
+												class="group-hover:fill-red duration-300"
+											/>
+										</svg>
+									</div>
+								</button>
+							</div>
 						</div>
 						<div class="flex flex-col items-start gap-1">
 							<p class="text-rose500 text-sm font-thin">Crème Brûlée</p>
@@ -84,10 +147,51 @@
 								alt="Macaron Mix of Five"
 								class="inset-0 h-full w-full rounded-lg object-cover object-center"
 							/>
-							<button class="cart-btn">
-								<img src="img/shopping-cart-plus.png" alt="Shopping Cart Icon" />
-								<span class="whitespace-nowrap text-sm">Add to Cart</span>
-							</button>
+							<div class="cart-buttons">
+								<!-- No Items Added -->
+								<button class="cart-btn flex" data-id="3">
+									<img src="img/shopping-cart-plus.png" alt="Shopping Cart Icon" />
+									<span class="whitespace-nowrap text-sm">Add to Cart</span>
+								</button>
+								<!-- Items Added -->
+								<button class="active-cart-btn space-between hidden cursor-default" data-id="3">
+									<div
+										class="remove-btn group flex h-5 w-5 cursor-pointer items-center justify-center rounded-full border border-white text-xl duration-300"
+									>
+										<svg
+											width="20"
+											height="20"
+											viewBox="0 0 20 20"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
+											class="rounded-full duration-300 group-hover:bg-white"
+										>
+											<path d="M5 9.375H15V10.625H5V9.375Z" fill="white" class="group-hover:fill-red duration-300" />
+										</svg>
+									</div>
+
+									<span id="qty-3" class="flex-1 text-white">4</span>
+
+									<div
+										class="add-btn group flex h-5 w-5 cursor-pointer items-center justify-center rounded-full border border-white text-xl duration-300"
+									>
+										<svg
+											width="20"
+											height="20"
+											viewBox="0 0 20 20"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
+											class="rounded-full duration-300 group-hover:bg-white"
+										>
+											<path
+												d="M15 9.375H10.625V5H9.375V9.375H5V10.625H9.375V15H10.625V10.625H15V9.375Z"
+												fill="white"
+												class="group-hover:fill-red duration-300"
+											/>
+										</svg>
+									</div>
+								</button>
+							</div>
 						</div>
 						<div class="flex flex-col items-start gap-1">
 							<p class="text-rose500 text-sm font-thin">Macaron</p>
@@ -103,10 +207,51 @@
 								alt="Classic Tiramisu"
 								class="inset-0 h-full w-full rounded-lg object-cover object-center"
 							/>
-							<button class="cart-btn">
-								<img src="img/shopping-cart-plus.png" alt="Shopping Cart Icon" />
-								<span class="whitespace-nowrap text-sm">Add to Cart</span>
-							</button>
+							<div class="cart-buttons">
+								<!-- No Items Added -->
+								<button class="cart-btn flex" data-id="4">
+									<img src="img/shopping-cart-plus.png" alt="Shopping Cart Icon" />
+									<span class="whitespace-nowrap text-sm">Add to Cart</span>
+								</button>
+								<!-- Items Added -->
+								<button class="active-cart-btn space-between hidden cursor-default" data-id="4">
+									<div
+										class="remove-btn group flex h-5 w-5 cursor-pointer items-center justify-center rounded-full border border-white text-xl duration-300"
+									>
+										<svg
+											width="20"
+											height="20"
+											viewBox="0 0 20 20"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
+											class="rounded-full duration-300 group-hover:bg-white"
+										>
+											<path d="M5 9.375H15V10.625H5V9.375Z" fill="white" class="group-hover:fill-red duration-300" />
+										</svg>
+									</div>
+
+									<span id="qty-4" class="flex-1 text-white">4</span>
+
+									<div
+										class="add-btn group flex h-5 w-5 cursor-pointer items-center justify-center rounded-full border border-white text-xl duration-300"
+									>
+										<svg
+											width="20"
+											height="20"
+											viewBox="0 0 20 20"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
+											class="rounded-full duration-300 group-hover:bg-white"
+										>
+											<path
+												d="M15 9.375H10.625V5H9.375V9.375H5V10.625H9.375V15H10.625V10.625H15V9.375Z"
+												fill="white"
+												class="group-hover:fill-red duration-300"
+											/>
+										</svg>
+									</div>
+								</button>
+							</div>
 						</div>
 						<div class="flex flex-col items-start gap-1">
 							<p class="text-rose500 text-sm font-thin">Tiramisu</p>
@@ -122,10 +267,51 @@
 								alt="Pistachio Baklava"
 								class="inset-0 h-full w-full rounded-lg object-cover object-center"
 							/>
-							<button class="cart-btn">
-								<img src="img/shopping-cart-plus.png" alt="Shopping Cart Icon" />
-								<span class="whitespace-nowrap text-sm">Add to Cart</span>
-							</button>
+							<div class="cart-buttons">
+								<!-- No Items Added -->
+								<button class="cart-btn flex" data-id="5">
+									<img src="img/shopping-cart-plus.png" alt="Shopping Cart Icon" />
+									<span class="whitespace-nowrap text-sm">Add to Cart</span>
+								</button>
+								<!-- Items Added -->
+								<button class="active-cart-btn space-between hidden cursor-default" data-id="5">
+									<div
+										class="remove-btn group flex h-5 w-5 cursor-pointer items-center justify-center rounded-full border border-white text-xl duration-300"
+									>
+										<svg
+											width="20"
+											height="20"
+											viewBox="0 0 20 20"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
+											class="rounded-full duration-300 group-hover:bg-white"
+										>
+											<path d="M5 9.375H15V10.625H5V9.375Z" fill="white" class="group-hover:fill-red duration-300" />
+										</svg>
+									</div>
+
+									<span id="qty-5" class="flex-1 text-white">4</span>
+
+									<div
+										class="add-btn group flex h-5 w-5 cursor-pointer items-center justify-center rounded-full border border-white text-xl duration-300"
+									>
+										<svg
+											width="20"
+											height="20"
+											viewBox="0 0 20 20"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
+											class="rounded-full duration-300 group-hover:bg-white"
+										>
+											<path
+												d="M15 9.375H10.625V5H9.375V9.375H5V10.625H9.375V15H10.625V10.625H15V9.375Z"
+												fill="white"
+												class="group-hover:fill-red duration-300"
+											/>
+										</svg>
+									</div>
+								</button>
+							</div>
 						</div>
 						<div class="flex flex-col items-start gap-1">
 							<p class="text-rose500 text-sm font-thin">Baklava</p>
@@ -141,10 +327,51 @@
 								alt="Lemon Meringue Pie"
 								class="inset-0 h-full w-full rounded-lg object-cover object-center"
 							/>
-							<button class="cart-btn">
-								<img src="img/shopping-cart-plus.png" alt="Shopping Cart Icon" />
-								<span class="whitespace-nowrap text-sm">Add to Cart</span>
-							</button>
+							<div class="cart-buttons">
+								<!-- No Items Added -->
+								<button class="cart-btn flex" data-id="6">
+									<img src="img/shopping-cart-plus.png" alt="Shopping Cart Icon" />
+									<span class="whitespace-nowrap text-sm">Add to Cart</span>
+								</button>
+								<!-- Items Added -->
+								<button class="active-cart-btn space-between hidden cursor-default" data-id="6">
+									<div
+										class="remove-btn group flex h-5 w-5 cursor-pointer items-center justify-center rounded-full border border-white text-xl duration-300"
+									>
+										<svg
+											width="20"
+											height="20"
+											viewBox="0 0 20 20"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
+											class="rounded-full duration-300 group-hover:bg-white"
+										>
+											<path d="M5 9.375H15V10.625H5V9.375Z" fill="white" class="group-hover:fill-red duration-300" />
+										</svg>
+									</div>
+
+									<span id="qty-6" class="flex-1 text-white">4</span>
+
+									<div
+										class="add-btn group flex h-5 w-5 cursor-pointer items-center justify-center rounded-full border border-white text-xl duration-300"
+									>
+										<svg
+											width="20"
+											height="20"
+											viewBox="0 0 20 20"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
+											class="rounded-full duration-300 group-hover:bg-white"
+										>
+											<path
+												d="M15 9.375H10.625V5H9.375V9.375H5V10.625H9.375V15H10.625V10.625H15V9.375Z"
+												fill="white"
+												class="group-hover:fill-red duration-300"
+											/>
+										</svg>
+									</div>
+								</button>
+							</div>
 						</div>
 						<div class="flex flex-col items-start gap-1">
 							<p class="text-rose500 text-sm font-thin">Baklava</p>
@@ -160,10 +387,51 @@
 								alt="Red Velvet Cake"
 								class="inset-0 h-full w-full rounded-lg object-cover object-center"
 							/>
-							<button class="cart-btn">
-								<img src="img/shopping-cart-plus.png" alt="Shopping Cart Icon" />
-								<span class="whitespace-nowrap text-sm">Add to Cart</span>
-							</button>
+							<div class="cart-buttons">
+								<!-- No Items Added -->
+								<button class="cart-btn flex" data-id="7">
+									<img src="img/shopping-cart-plus.png" alt="Shopping Cart Icon" />
+									<span class="whitespace-nowrap text-sm">Add to Cart</span>
+								</button>
+								<!-- Items Added -->
+								<button class="active-cart-btn space-between hidden cursor-default" data-id="7">
+									<div
+										class="remove-btn group flex h-5 w-5 cursor-pointer items-center justify-center rounded-full border border-white text-xl duration-300"
+									>
+										<svg
+											width="20"
+											height="20"
+											viewBox="0 0 20 20"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
+											class="rounded-full duration-300 group-hover:bg-white"
+										>
+											<path d="M5 9.375H15V10.625H5V9.375Z" fill="white" class="group-hover:fill-red duration-300" />
+										</svg>
+									</div>
+
+									<span id="qty-7" class="flex-1 text-white">4</span>
+
+									<div
+										class="add-btn group flex h-5 w-5 cursor-pointer items-center justify-center rounded-full border border-white text-xl duration-300"
+									>
+										<svg
+											width="20"
+											height="20"
+											viewBox="0 0 20 20"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
+											class="rounded-full duration-300 group-hover:bg-white"
+										>
+											<path
+												d="M15 9.375H10.625V5H9.375V9.375H5V10.625H9.375V15H10.625V10.625H15V9.375Z"
+												fill="white"
+												class="group-hover:fill-red duration-300"
+											/>
+										</svg>
+									</div>
+								</button>
+							</div>
 						</div>
 						<div class="flex flex-col items-start gap-1">
 							<p class="text-rose500 text-sm font-thin">Cake</p>
@@ -179,10 +447,51 @@
 								alt="Salted Caramel Brownie"
 								class="inset-0 h-full w-full rounded-lg object-cover object-center"
 							/>
-							<button class="cart-btn">
-								<img src="img/shopping-cart-plus.png" alt="Shopping Cart Icon" />
-								<span class="whitespace-nowrap text-sm">Add to Cart</span>
-							</button>
+							<div class="cart-buttons">
+								<!-- No Items Added -->
+								<button class="cart-btn flex" data-id="8">
+									<img src="img/shopping-cart-plus.png" alt="Shopping Cart Icon" />
+									<span class="whitespace-nowrap text-sm">Add to Cart</span>
+								</button>
+								<!-- Items Added -->
+								<button class="active-cart-btn space-between hidden cursor-default" data-id="8">
+									<div
+										class="remove-btn group flex h-5 w-5 cursor-pointer items-center justify-center rounded-full border border-white text-xl duration-300"
+									>
+										<svg
+											width="20"
+											height="20"
+											viewBox="0 0 20 20"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
+											class="rounded-full duration-300 group-hover:bg-white"
+										>
+											<path d="M5 9.375H15V10.625H5V9.375Z" fill="white" class="group-hover:fill-red duration-300" />
+										</svg>
+									</div>
+
+									<span id="qty-8" class="flex-1 text-white">4</span>
+
+									<div
+										class="add-btn group flex h-5 w-5 cursor-pointer items-center justify-center rounded-full border border-white text-xl duration-300"
+									>
+										<svg
+											width="20"
+											height="20"
+											viewBox="0 0 20 20"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
+											class="rounded-full duration-300 group-hover:bg-white"
+										>
+											<path
+												d="M15 9.375H10.625V5H9.375V9.375H5V10.625H9.375V15H10.625V10.625H15V9.375Z"
+												fill="white"
+												class="group-hover:fill-red duration-300"
+											/>
+										</svg>
+									</div>
+								</button>
+							</div>
 						</div>
 						<div class="flex flex-col items-start gap-1">
 							<p class="text-rose500 text-sm font-thin">Brownie</p>
@@ -198,10 +507,51 @@
 								alt="Vanilla Panna Cotta"
 								class="inset-0 h-full w-full rounded-lg object-cover object-center"
 							/>
-							<button class="cart-btn">
-								<img src="img/shopping-cart-plus.png" alt="Shopping Cart Icon" />
-								<span class="whitespace-nowrap text-sm">Add to Cart</span>
-							</button>
+							<div class="cart-buttons">
+								<!-- No Items Added -->
+								<button class="cart-btn flex" data-id="9">
+									<img src="img/shopping-cart-plus.png" alt="Shopping Cart Icon" />
+									<span class="whitespace-nowrap text-sm">Add to Cart</span>
+								</button>
+								<!-- Items Added -->
+								<button class="active-cart-btn space-between hidden cursor-default" data-id="9">
+									<div
+										class="remove-btn group flex h-5 w-5 cursor-pointer items-center justify-center rounded-full border border-white text-xl duration-300"
+									>
+										<svg
+											width="20"
+											height="20"
+											viewBox="0 0 20 20"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
+											class="rounded-full duration-300 group-hover:bg-white"
+										>
+											<path d="M5 9.375H15V10.625H5V9.375Z" fill="white" class="group-hover:fill-red duration-300" />
+										</svg>
+									</div>
+
+									<span id="qty-9" class="flex-1 text-white">4</span>
+
+									<div
+										class="add-btn group flex h-5 w-5 cursor-pointer items-center justify-center rounded-full border border-white text-xl duration-300"
+									>
+										<svg
+											width="20"
+											height="20"
+											viewBox="0 0 20 20"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
+											class="rounded-full duration-300 group-hover:bg-white"
+										>
+											<path
+												d="M15 9.375H10.625V5H9.375V9.375H5V10.625H9.375V15H10.625V10.625H15V9.375Z"
+												fill="white"
+												class="group-hover:fill-red duration-300"
+											/>
+										</svg>
+									</div>
+								</button>
+							</div>
 						</div>
 						<div class="flex flex-col items-start gap-1">
 							<p class="text-rose500 text-sm font-thin">Panna Cotta</p>

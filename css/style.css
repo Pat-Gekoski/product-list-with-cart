@@ -665,6 +665,14 @@ video {
   flex: 1 1 0%;
 }
 
+.cursor-default {
+  cursor: default;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
 .flex-col {
   flex-direction: column;
 }
@@ -707,10 +715,6 @@ video {
 
 .border {
   border-width: 1px;
-}
-
-.border-none {
-  border-style: none;
 }
 
 .border-white {
@@ -807,10 +811,6 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
-.duration-200 {
-  transition-duration: 200ms;
-}
-
 .duration-300 {
   transition-duration: 300ms;
 }
@@ -821,6 +821,7 @@ video {
   top: 100%;
   margin-left: auto;
   margin-right: auto;
+  height: 46px;
   width: 10rem;
   --tw-translate-x: -50%;
   --tw-translate-y: -50%;
@@ -836,8 +837,6 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
   padding-left: 0.75rem;
   padding-right: 0.75rem;
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
   transition-duration: 150ms;
 }
 
@@ -852,6 +851,7 @@ video {
   top: 100%;
   margin-left: auto;
   margin-right: auto;
+  height: 46px;
   width: 10rem;
   --tw-translate-x: -50%;
   --tw-translate-y: -50%;
@@ -867,32 +867,12 @@ video {
   background-color: rgb(199 59 15 / var(--tw-bg-opacity, 1));
   padding-left: 0.75rem;
   padding-right: 0.75rem;
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
   transition-duration: 150ms;
 }
 
 .active-cart-btn:hover {
   --tw-text-opacity: 1;
   color: rgb(199 59 15 / var(--tw-text-opacity, 1));
-}
-
-.hover\:bg-white:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
-}
-
-.hover\:bg-emerald-50:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(236 253 245 / var(--tw-bg-opacity, 1));
-}
-
-.hover\:fill-white:hover {
-  fill: #fff;
-}
-
-.hover\:fill-red:hover {
-  fill: #C73B0F;
 }
 
 .group:hover .group-hover\:bg-white {
