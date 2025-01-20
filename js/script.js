@@ -254,6 +254,7 @@ function openModal() {
 					</div>
 					<p class="text-base text-rose900 font-semibold">$${(item.qty * item.cost).toFixed(2)}</p>
 				</div>
+				<hr class="my-4">
 			`
 		}
 	}

@@ -20,6 +20,7 @@ module.exports = {
 				'mb-6',
 				'mt-5',
 				'my-8',
+				'my-4',
 				'p-3',
 				'p-4',
 				'text-rose800',
@@ -46,6 +47,8 @@ module.exports = {
 				'hover:fill-black',
 				'pointer-events-none',
 				'pointer-events-auto',
+				'border-b',
+				'border-rose100',
 			],
 
 			colors: {
