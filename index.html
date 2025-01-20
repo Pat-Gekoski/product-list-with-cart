@@ -571,24 +571,31 @@
 						<p class="text-rose500 text-center text-sm font-semibold">Your added items will appear here</p>
 					</div>
 					<!-- Cart with items -->
-					<div class="cart-items hidden flex-col">
+					<div class="cart-items hidden flex-col"></div>
 				</div>
 			</section>
 		</main>
-		<div id="overlay" class="fixed inset-0 bg-gray-900 bg-opacity-50 opacity-0 pointer-events-none transition-opacity duration-300 z-40">
-			<div id="confirmModal" class="p-5 rounded-t-lg bg-white absolute bottom-0 left-0 right-0 z-150 transform translate-y-full duration-500">
-				<div class="flex flex-col mb-8">
-					<img src="/img/carbon_checkmark-outline.png" alt="Checkmark" class="w-[48px] h-[48px] mb-3">
-					<h2 class="text-[44px] leading-[55px] font-bold line text-rose900 mb-2">Order Confirmed</h2>
-					<p class="text-base text-rose500">We hope you enjoy your food!</p>
+		<!-- Order modal -->
+		<div
+			id="overlay"
+			class="pointer-events-none fixed inset-0 z-40 bg-gray-900 bg-opacity-50 p-10 opacity-0 transition-opacity duration-300"
+		>
+			<div
+				id="confirmModal"
+				class="z-150 absolute bottom-0 left-0 max-h-full w-full translate-y-[2000px] transform rounded-t-lg bg-white p-5 duration-500 sm:bottom-1/2 sm:left-1/2 sm:max-w-[calc(100%-40px)] sm:translate-x-[-50%] sm:rounded-lg md:max-w-[688px] lg:max-w-[592px]"
+			>
+				<div class="mb-8 flex flex-col">
+					<img src="/img/carbon_checkmark-outline.png" alt="Checkmark" class="mb-3 h-[48px] w-[48px]" />
+					<h2 class="line text-rose900 mb-2 text-[44px] font-bold leading-[55px]">Order Confirmed</h2>
+					<p class="text-rose500 text-base">We hope you enjoy your food!</p>
 				</div>
-				<div class="p-4 bg-rose50 rounded-lg">
-					<!-- TEMPLATE -->
-
-					<!-- TEMPLATE -->
+				<div id="modalOrderList" class="mb-8 rounded-lg p-4">
+					<!-- Order items go here -->
 				</div>
+				<button id="newOrder" class="bg-red text-md flex w-full items-center justify-center rounded-full p-3 text-white">
+					Start New Order
+				</button>
 			</div>
 		</div>
-
 	</body>
 </html>
